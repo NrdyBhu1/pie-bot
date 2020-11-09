@@ -37,7 +37,7 @@ class MyClient(Client):
 						counter += 1
 
 
-client_token = "NzcyMDMyMzk#wtf#3NTQ5NzY0#stop#NjA5.X50xMw.uQqOHGLXEZ5#scanning#X1h824YLUJG-Y5iE"
+client_token = "NzcyMDMy#wtf#Mzk3NTQ5NzY0NjA5.X#stop#50xMw.ZeWFjxjhjZ4PcyD1#scanning#Thw8Tr28i8g"
 DISCORDBOT_TOKEN = client_token.split("#")
 
 bot = MyClient()
