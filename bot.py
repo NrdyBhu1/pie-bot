@@ -1,6 +1,3 @@
-import os
-from dotenv import load_dotenv
-load_dotenv()
 from discord.ext import commands
 from discord import Member, Client
 import discord
@@ -39,5 +36,9 @@ class MyClient(Client):
 						await x.delete()
 						counter += 1
 
+
+client_token = "NzcyMDMyMzk#wtf#3NTQ5NzY0#stop#NjA5.X50xMw.uQqOHGLXEZ5#scanning#X1h824YLUJG-Y5iE"
+DISCORDBOT_TOKEN = client_token.split("#")
+
 bot = MyClient()
-bot.run(os.getenv('DISCORDBOT_TOKEN'))
+bot.run(DISCORDBOT_TOKEN[0]+DISCORDBOT_TOKEN[2]+DISCORDBOT_TOKEN[4]+DISCORDBOT_TOKEN[6])
