@@ -33,7 +33,7 @@ def get_card(card_name, name, img, status, activity):
     draw = ImageDraw.Draw(card)
     draw.text((50, 10), str(name), font=font, fill='black')
     draw.text((50, 190), "status:"+str(status), font=font, fill='black')
-    draw.text((50, 125), "activity:"+str(activity), font=font, fill='black')
+    draw.text((50, 225), "activity:"+str(activity), font=font, fill='black')
     response = requests.get(img)
     avatar = Image.open(BytesIO(response.content))#, Image.ANTIALIAS)
     avatar = avatar.resize((130, 130))
