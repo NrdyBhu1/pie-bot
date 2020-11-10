@@ -28,12 +28,13 @@ def get_white_card(name, img, status, activity):
     w_card = get_card("white", name, img, status, activity)
     return w_card
 
-def get_card(card_name, name, img, status, activity):
+def get_card(card_name, name, img, status, activity, nick_name="None"):
     card = Image.open("cards/{}_card.png".format(card_name))
     draw = ImageDraw.Draw(card)
     draw.text((50, 10), str(name), font=font, fill='black')
-    draw.text((50, 190), "status:"+str(status), font=font, fill='black')
-    draw.text((50, 225), "activity:"+str(activity), font=font, fill='black')
+    draw.text((50, 190), "status:"+str(status).lower(), font=font, fill='black')
+    draw.text((50, 225), "activity:"+str(activity).lower(), font=font, fill='black')
+    draw.text((50, 225), "nick:"+str(nick_name).lower(), font=font, fill='black')
     response = requests.get(img)
     avatar = Image.open(BytesIO(response.content))#, Image.ANTIALIAS)
     avatar = avatar.resize((130, 130))
