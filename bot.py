@@ -11,15 +11,15 @@ class MyClient(Client):
 
 	async def on_message(self, message):
 		if message.content.lower() == "pie green card":
-			await message.channel.send(file=discord.File(get_green_card(message.author.name, message.author.avatar_url, message.author.status, message.author.activity)))
+			await message.channel.send(file=discord.File(get_green_card(message.author.name, message.author.avatar_url, message.author.status, message.author.activity, message.author.display_name)))
 		elif message.content.lower() == "pie blue card":
-			await message.channel.send(file=discord.File(get_blue_card(message.author.name, message.author.avatar_url, message.author.status, message.author.activity)))
+			await message.channel.send(file=discord.File(get_blue_card(message.author.name, message.author.avatar_url, message.author.status, message.author.activity, message.author.display_name)))
 		elif message.content.lower() == "pie purp card":
-			await message.channel.send(file=discord.File(get_purp_card(message.author.name, message.author.avatar_url, message.author.status, message.author.activity)))
+			await message.channel.send(file=discord.File(get_purp_card(message.author.name, message.author.avatar_url, message.author.status, message.author.activity, message.author.display_name)))
 		elif message.content.lower() == "pie yellow card":
-			await message.channel.send(file=discord.File(get_yellow_card(message.author.name, message.author.avatar_url, message.author.status, message.author.activity)))
+			await message.channel.send(file=discord.File(get_yellow_card(message.author.name, message.author.avatar_url, message.author.status, message.author.activity, message.author.display_name)))
 		elif message.content.lower() == "pie white card":
-			await message.channel.send(file=discord.File(get_white_card(message.author.name, message.author.avatar_url, message.author.status, message.author.activity)))
+			await message.channel.send(file=discord.File(get_white_card(message.author.name, message.author.avatar_url, message.author.status, message.author.activity, message.author.display_name)))
 
 
 		## clear
